@@ -6,9 +6,7 @@
 for addr in $(cat repos.txt); do
 
     dir=$(echo $addr | cut -d / -f 2)
-    cd $dir
-    git commit -a -m "$1"
-    git push origin master
-    cd ..
+    git -C $dir commit -a -m "$1"
+    git -C $dir push origin master
 
 done

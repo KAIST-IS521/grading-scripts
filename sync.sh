@@ -4,8 +4,6 @@
 for addr in $(cat repos.txt); do
 
     dir=$(echo $addr | cut -d / -f 2)
-    cd $dir
-    git pull origin master
-    cd ..
+    git -C $dir pull origin master
 
 done

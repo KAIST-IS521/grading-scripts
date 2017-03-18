@@ -4,9 +4,7 @@
 for addr in $(cat repos.txt); do
 
     dir=$(echo $addr | cut -d / -f 2)
-    cd $dir
-    git pull
-    git remote add upstream $1
-    cd ..
+    git -C $dir pull
+    git -C $dir remote add upstream $1
 
 done
