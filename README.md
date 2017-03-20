@@ -15,3 +15,8 @@ to manage students' repositories.
 You need to have a ```repos.txt``` file in the same directory where all the
 other scripts are located in. This file contains a list of URLs to students'
 repositories.
+
+### Why not use parallel processing?
+
+We should sequentially run git commands, because our school prevents opening
+multiple TCP connections at the same time.
