@@ -5,5 +5,6 @@ for addr in $(cat repos.txt); do
 
     dir=$(echo $addr | cut -d / -f 2)
     git -C $dir pull origin master
+    sleep 10
 
 done

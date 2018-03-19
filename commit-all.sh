@@ -8,5 +8,6 @@ for addr in $(cat repos.txt); do
     dir=$(echo $addr | cut -d / -f 2)
     git -C $dir commit -a -m "$1"
     git -C $dir push origin master
+    sleep 10
 
 done

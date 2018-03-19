@@ -8,5 +8,6 @@ for addr in $(cat repos.txt); do
         echo FAILED to clone $addr
         exit 1
     fi
+    sleep 10
 
 done
